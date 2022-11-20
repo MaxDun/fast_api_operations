@@ -57,6 +57,7 @@ class OperationsService:
         return operation
 
     def delete(self, operation_id: int):
-        operatin = self._get(operation_id)
-        self.session.delete(operatin)
+        operation = self._get(operation_id)
+        self.session.delete(operation)
         self.session.commit()
+        
